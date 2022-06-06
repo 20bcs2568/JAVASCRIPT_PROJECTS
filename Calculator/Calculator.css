@@ -44,6 +44,17 @@
         text-align: center;
     }
 
+    #x2 img
+    {
+        width: 90%;
+    }
+
+    #underroot img
+    {
+        width: 35px;
+        height: 40px;
+    }
+
     #values {
         border: 2px solid rgb(11, 5, 5);
         margin: 6px;

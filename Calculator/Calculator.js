@@ -5,6 +5,8 @@ let backspace = document.getElementById('backspace');
 let para = document.getElementById('para');
 let clear = document.getElementById('clear');
 let input = document.getElementById('input');
+let underroot = document.getElementById('underroot');
+let power = document.getElementById('x2');
 let input2 = document.getElementById('input2');
 let comment = "Please enter the value";
 let a = "";
@@ -64,6 +66,35 @@ function select_expression(index) {
     }
 }
 
+underroot.addEventListener('click', ()=>
+{
+    if(a == "" && b == "")
+    {
+        para.innerHTML = comment;
+    }
+    else
+    {
+        input.value = Math.sqrt(parseInt(a));
+    }
+})
+
+x2.addEventListener('click', ()=>
+{
+    if (a == "" && b == "") 
+    {
+        para.innerHTML = comment;
+    }
+    if (a != "" && b == "") {
+        status_a = 1;
+    }
+    else
+    {
+        let A = parseInt(a);
+        let B = parseInt(b);
+        input.value = (A**B);
+    }  
+});
+
 answer.addEventListener('click', () => {
     if (status_a == 0 || status_b == 0) {
         para.innerHTML = comment;
@@ -77,6 +108,7 @@ answer.addEventListener('click', () => {
 clear.addEventListener('click', () => {
     a = "";
     b = "";
+    ans = 0;
     status_a = 0;
     stauts_b = 0;
     input2.value = "AC";
