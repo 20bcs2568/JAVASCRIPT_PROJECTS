@@ -4,8 +4,7 @@
         justify-content: center;
     }
 
-    body
-    {
+    body {
         background-color: #999999;
     }
 
@@ -17,11 +16,15 @@
         background-color: rgb(255, 255, 255);
         width: 400px;
         height: 500px;
-        border: 2px solid rgb(0, 0, 0);
+        border: 2px solid rgb(88, 26, 26);
         padding: 10px;
         flex-direction: column;
     }
 
+    .inputs {
+        border: 2px solid rgb(0, 0, 0);
+        padding: 0px;
+    }
 
     .input {
         height: 50px;
@@ -31,11 +34,10 @@
     }
 
     #input {
-        width: 80%;
-        margin-right: 4px;
+        width: 82%; 
         border: 2px solid rgb(0, 0, 0);
     }
-    
+
     #input2 {
         width: 20%;
         border: 2px solid rgb(0, 0, 0);
@@ -43,7 +45,7 @@
     }
 
     #values {
-        /* border: 2px solid rgb(11, 5, 5); */
+        border: 2px solid rgb(11, 5, 5);
         margin: 6px;
         flex-wrap: wrap;
         margin-top: 50px;
@@ -55,16 +57,16 @@
         font-size: 30px;
         width: 20%;
         cursor: pointer;
-        border: 1px solid rgb(0, 0, 0);
     }
 
-    .numbers:hover
-    {
+    .numbers:hover {
         border: 2px solid black;
     }
 
-    #para
-    {
+    #para {
         color: red;
+        height: 30px;
+        text-align: center;
+        width: 100%;
         font-size: 24px;
     }
