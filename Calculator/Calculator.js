@@ -40,7 +40,7 @@ function perform_expression() {
     else if (expression == '-')
         ans = parseFloat(a) - parseFloat(b);
 
-    else if (expression == '*')
+    else if (expression == 'X')
         ans = parseFloat(a) * parseFloat(b);
 
     else if (expression == '/')
@@ -95,7 +95,8 @@ underroot.addEventListener('click', ()=>
         input.value = val.toFixed(2);
         str = str + " " + "sqrt(" + a + ")" + " = " + input.value  + "<br>";
         history.innerHTML = str;
-        a = ""; 
+        a = "";
+        ans = input.value;
     }
 });
 
