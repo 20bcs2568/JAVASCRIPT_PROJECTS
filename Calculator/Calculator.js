@@ -22,6 +22,7 @@ let divide = document.getElementById('number_divide');
 let equal = document.getElementById('number_equal');
 let point = document.getElementById('number_point');
 let para = document.getElementById('para');
+let backspace = document.getElementById('backspace');
 
 clear.addEventListener('click', () => {
     input.value = "";
@@ -297,3 +298,22 @@ point.addEventListener('click', () => {
 });
 
 
+backspace.addEventListener('click', ()=>
+{
+    if(a == "" && b == "")
+    {
+        input2.value = "Please enter the value";
+    }
+    if(a != "" && b == "")
+    {
+        console.log('First one')
+        a = a.slice(0, a.length-1);
+        input.value = a;        
+    }
+    else
+    {
+        console.log("second");
+        b = b.slice(0, b.length-1);
+        input.value = b;         
+    }
+});
