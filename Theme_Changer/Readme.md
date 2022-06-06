@@ -1,6 +1,6 @@
 # JAVASCRIPT_PROJECTS
 
-  1. THEME CHANGER
+# THEME CHANGER
       
       In this project you will get feature to change your theme by just click on a single button.   
       It will automatically detect your mode whether it was dark or light.
