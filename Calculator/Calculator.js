@@ -49,7 +49,7 @@ function perform_expression() {
 
 function select_expression(index) {
     input2.value = operator[index].innerHTML;
-    if (a == "" && ans != 0) {
+    if (a == "" && ans != 0)  {
         a = ans;
         status_a = 1;
     }
