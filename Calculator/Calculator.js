@@ -8,7 +8,6 @@ let history_button = document.getElementById('delete');
 let clear = document.getElementById('clear');
 let input = document.getElementById('input');
 let underroot = document.getElementById('underroot');
-let power = document.getElementById('x2');
 let input2 = document.getElementById('input2');
 
 
@@ -47,13 +46,16 @@ function perform_expression() {
     else if (expression == '/')
         ans = parseFloat(a) / parseFloat(b);
 
-    ans = ans.toFixed(2);
-    input.value = ans;
+    else if (expression == '**')
+        ans = parseFloat(a) ** parseFloat(b);
+
+    let val = ans.toFixed(2);
+    input.value = val;
    
-    str = str + `${a} ${expression} ${b} = ${ans} <br>`;
+    str = str + `${a} ${expression} ${b} = ${val} <br>`;
     history.innerHTML = str;
 
-    para.innerHTML = `Answer = ${ans}`;
+    para.innerHTML = `Answer = ${val}`;
     a = "";
     b = "";
     status_a = 0;
@@ -62,6 +64,10 @@ function perform_expression() {
 
 function select_expression(index) {
     input2.value = operator[index].innerHTML;
+    if (input2.value == '<img src="x2.png">')
+    {
+        input2.value = "**";
+    }
     if (a == "" && ans != 0)  {
         a = ans;
         status_a = 1;
@@ -91,29 +97,6 @@ underroot.addEventListener('click', ()=>
         history.innerHTML = str;
         a = ""; 
     }
-})
-
-x2.addEventListener('click', ()=>
-{
-    if (a == "" && b == "") 
-    {
-        para.innerHTML = comment;
-    }
-    else if (a != "" && b == "") {
-        status_a = 1;
-    }
-    else
-    {
-        let A = parseFloat(a);
-        let B = parseFloat(b);
-        input.value = (A**B).toFixed(2);
-        str = str + `${A} ** ${B} = ${input.value} <br>`;
-        history.innerHTML = str;
-        a = "";
-        b = "";
-        status_a = 0;
-        status_b = 0;
-    }  
 });
 
 answer.addEventListener('click', () => {
@@ -123,7 +106,6 @@ answer.addEventListener('click', () => {
     else {
         perform_expression();
         input2.value = "=";
-
     }
 });
 
@@ -174,3 +156,4 @@ operator[0].addEventListener('click', () => { select_expression(0) });
 operator[1].addEventListener('click', () => { select_expression(1) });
 operator[2].addEventListener('click', () => { select_expression(2) });
 operator[3].addEventListener('click', () => { select_expression(3) });
+operator[4].addEventListener('click', () => { select_expression(4) });

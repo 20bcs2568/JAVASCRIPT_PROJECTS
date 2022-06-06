@@ -3,6 +3,10 @@
     align-items: center;
     justify-content: center;
 }
+::-webkit-scrollbar
+{
+    width: 0px;
+}
 
 body {
     background-color: #e0b3b382;
@@ -150,14 +154,15 @@ background-color: rgb(69, 105, 133);}
 #history p{
     /* border: 2px solid green; */
     margin: 10px;
-    height: 60%;
     border-radius: 10px;
+    height: 60%;
     padding: 10px;
     color: black;
     font-size: 18px;
-    background-color: white;    
-    overflow: hidden;
+    background-color: #efefef;    
+    overflow-x: hidden;
     text-align: left;
+    overflow-y: scroll;
 }
 
 #history button
