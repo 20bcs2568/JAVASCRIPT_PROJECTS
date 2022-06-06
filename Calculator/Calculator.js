@@ -3,17 +3,22 @@ let operator = document.getElementsByClassName('operator');
 let answer = document.getElementById('answer');
 let backspace = document.getElementById('backspace');
 let para = document.getElementById('para');
+let history = document.getElementById('history_para');
+let history_button = document.getElementById('delete');
 let clear = document.getElementById('clear');
 let input = document.getElementById('input');
 let underroot = document.getElementById('underroot');
 let power = document.getElementById('x2');
 let input2 = document.getElementById('input2');
+
+
 let comment = "Please enter the value";
 let a = "";
 let b = "";
 let status_a = 0;
 let status_b = 0;
 let ans = 0;
+let str = "";
 
 function add_Data(index) {
     if (status_a == 0) {
@@ -29,6 +34,7 @@ function add_Data(index) {
 
 function perform_expression() {
     let expression = input2.value;
+    
     if (expression == '+')
         ans = parseFloat(a) + parseFloat(b);
 
@@ -41,7 +47,12 @@ function perform_expression() {
     else if (expression == '/')
         ans = parseFloat(a) / parseFloat(b);
 
+    ans = ans.toFixed(2);
     input.value = ans;
+   
+    str = str + `${a} ${expression} ${b} = ${ans} <br>`;
+    history.innerHTML = str;
+
     para.innerHTML = `Answer = ${ans}`;
     a = "";
     b = "";
@@ -74,7 +85,11 @@ underroot.addEventListener('click', ()=>
     }
     else
     {
-        input.value = Math.sqrt(parseInt(a));
+        let val = Math.sqrt(parseInt(a));
+        input.value = val.toFixed(2);
+        str = str + " " + "sqrt(" + a + ")" + " = " + input.value  + "<br>";
+        history.innerHTML = str;
+        a = ""; 
     }
 })
 
@@ -84,14 +99,20 @@ x2.addEventListener('click', ()=>
     {
         para.innerHTML = comment;
     }
-    if (a != "" && b == "") {
+    else if (a != "" && b == "") {
         status_a = 1;
     }
     else
     {
-        let A = parseInt(a);
-        let B = parseInt(b);
-        input.value = (A**B);
+        let A = parseFloat(a);
+        let B = parseFloat(b);
+        input.value = (A**B).toFixed(2);
+        str = str + `${A} ** ${B} = ${input.value} <br>`;
+        history.innerHTML = str;
+        a = "";
+        b = "";
+        status_a = 0;
+        status_b = 0;
     }  
 });
 
@@ -102,6 +123,7 @@ answer.addEventListener('click', () => {
     else {
         perform_expression();
         input2.value = "=";
+
     }
 });
 
@@ -128,6 +150,12 @@ backspace.addEventListener('click', () => {
         b = b.slice(0, b.length - 1)
         input.value = b;
     }
+});
+
+history_button.addEventListener('click', ()=>
+{
+    history.innerHTML = "";
+    str = " ";
 })
 
 number_value[0].addEventListener('click', () => { add_Data(0); });

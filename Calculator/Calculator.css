@@ -1,83 +1,177 @@
-    .flex {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    body {
-        background-color: #999999;
-    }
+body {
+    background-color: #e0b3b382;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    .container {
-        flex-direction: column;
-    }
+.container {
+    width: 500px;
+    flex-direction: column;
+}
 
-    #calculator {
-        background-color: rgb(255, 255, 255);
-        width: 400px;
-        height: 500px;
-        border: 2px solid rgb(88, 26, 26);
-        padding: 10px;
-        flex-direction: column;
-    }
+.container h1
+{
+    font-size: 50px;
+    margin: 20px 0px;
+    color: #444448;
+}
 
-    .inputs {
-        border: 2px solid rgb(0, 0, 0);
-        padding: 0px;
-    }
+.container #calculator {
+    background-color: #616268;
+    width: 85%;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 15px;
+}
 
-    .input {
-        height: 50px;
-        font-size: 25px;
-        text-align: right;
-        flex-wrap: wrap;
-    }
+input:focus {
+    outline: none !important;
+}
 
-    #input {
-        width: 82%; 
-        border: 2px solid rgb(0, 0, 0);
-    }
+.container #calculator .inputs {
+    border-radius: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 20px 10px 0px 10px;
+}
 
-    #input2 {
-        width: 20%;
-        border: 2px solid rgb(0, 0, 0);
-        text-align: center;
-    }
+.container #calculator .inputs .input {
+    font-size: 60px;
+    padding: 10px;
+    text-align: right;
+    color: grey;
+}
 
-    #x2 img
-    {
-        width: 90%;
-    }
+.container #calculator .inputs #input {
+    border:none;
+    outline: none;
+    padding: 0px;
+    width: 82%;
+    border-right: 3.4px solid #616268;
+    background-color: #efefef;
+}
 
-    #underroot img
-    {
-        width: 35px;
-        height: 40px;
-    }
+.container #calculator .inputs #input2 {
+    background-color: #efefef;
+    font-size: 40px;
+    width: 20%;
+    text-align: center;
+}
 
-    #values {
-        border: 2px solid rgb(11, 5, 5);
-        margin: 6px;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
+.numbers
+{
+    width: 81.8px;
+    height: 50.4px;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 2px 2px white;
+    border-radius: 5px;
+}
 
-    .numbers {
-        text-align: center;
-        margin: 8px;
-        font-size: 30px;
-        width: 20%;
-        cursor: pointer;
-    }
+#x2 img{
+    width: 90%;
+}
 
-    .numbers:hover {
-        border: 2px solid black;
-    }
+#underroot img {
+    height: 40px;
+}
 
-    #para {
-        color: red;
-        height: 30px;
-        text-align: center;
-        width: 100%;
-        font-size: 24px;
-    }
+#values {
+    margin: 6px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.numbers {
+    text-align: center;
+    margin: 8px;
+    font-size: 35px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.numbers:hover {
+    border: 2px solid #616268;
+}
+
+#para {
+    color: white;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin: 10px;
+    margin-top: 20px;;
+}
+
+.operator, #underroot, #x2
+{
+    background-color: rgb(171, 105, 105);
+    color: white;
+}
+
+#answer
+{
+    background-color: rgb(255, 130, 52);
+    color: white;
+}
+
+#clear
+{
+    background-color: rgb(90, 195, 71);
+    color: white;
+}
+
+#backspace img, #underroot img, #x2 img
+{
+    filter: invert(100%);
+}
+
+#backspace{
+background-color: rgb(69, 105, 133);}
+
+#history
+{
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 0px 10px;
+    background-color: #959596;
+    color: white;
+    margin-left: 50px;
+}
+
+#history p{
+    /* border: 2px solid green; */
+    margin: 10px;
+    height: 60%;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    font-size: 18px;
+    background-color: white;    
+    overflow: hidden;
+    text-align: left;
+}
+
+#history button
+{
+    margin: 10px;   
+    width: 80px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(166, 163, 163)
+}
+
+#history button:hover
+{
+    box-shadow: 1px 1px white;
+}

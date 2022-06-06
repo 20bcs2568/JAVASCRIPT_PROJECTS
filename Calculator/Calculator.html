@@ -7,37 +7,46 @@
 
 
 <body>
-    <div class="container flex">
-        <h1>Calculator</h1>
-        <div id="calculator" class="flex">
-            <div class="flex inputs">
-                <input id="input" class="input" type="number" placeholder="0" readonly>
-                <input id="input2" class="input" type="text" readonly>
-            </div>
+    <div class="flex">
+        <div class="container flex">
+            <h1>Calculator</h1>
+            <div id="calculator" class="flex">
+                <div class="flex inputs">
+                    <input id="input" class="input" type="number" placeholder="0" readonly>
+                    <input id="input2" class="input" type="text" readonly>
+                </div>
 
-            <div id="values" class="flex">
-                <button class="numbers" id = "x2"><img src="x2.jpg"></button>
-                <button class="numbers" id = "underroot"><img src="underroot.png" height= "30px"></button>
-                <button class="numbers" id = "backspace">Bksp</button>
-                <button class="numbers" id = "clear">AC</button>
-                <button class="numbers numbers_value" id="number_1">1</button>
-                <button class="numbers numbers_value" id="number_2">2</button>
-                <button class="numbers numbers_value" id="number_3">3</button>
-                <button class="numbers operator">/</button>
-                <button class="numbers numbers_value" id="number_4">4</button>
-                <button class="numbers numbers_value" id="number_5">5</button>
-                <button class="numbers numbers_value" id="number_6">6</button>
-                <button class="numbers operator">*</button>
-                <button class="numbers numbers_value" id="number_7">7</button>
-                <button class="numbers numbers_value" id="number_8">8</button>
-                <button class="numbers numbers_value" id="number_9">9</button>
-                <button class="numbers operator">-</button>
-                <button class="numbers numbers_value" id="number_0">0</button>
-                <button class="numbers numbers_value">.</button>
-                <button class="numbers" id="answer">=</button>
-                <button class="numbers operator">+</button>
+                <p id="para"></p>
+
+                <div id="values" class="flex">
+                    <button class="numbers" id="x2"><img src="x2.png"></button>
+                    <button class="numbers" id="underroot"><img src="underroot.png" height="30px"></button>
+                    <button class="numbers" id="backspace"><img src="back.svg"></button>
+                    <button class="numbers" id="clear">AC</button>
+                    <button class="numbers numbers_value" id="number_7">7</button>
+                    <button class="numbers numbers_value" id="number_8">8</button>
+                    <button class="numbers numbers_value" id="number_9">9</button>
+                    <button class="numbers operator">/</button>
+                    <button class="numbers numbers_value" id="number_4">4</button>
+                    <button class="numbers numbers_value" id="number_5">5</button>
+                    <button class="numbers numbers_value" id="number_6">6</button>
+                    <button class="numbers operator">*</button>
+                    <button class="numbers numbers_value" id="number_1">1</button>
+                    <button class="numbers numbers_value" id="number_2">2</button>
+                    <button class="numbers numbers_value" id="number_3">3</button>
+                    <button class="numbers operator">-</button>
+                    <button class="numbers numbers_value" id="number_0">0</button>
+                    <button class="numbers numbers_value">.</button>
+                    <button class="numbers" id="answer">=</button>
+                    <button class="numbers operator">+</button>
+                </div>
             </div>
-            <p id="para"></p>
+        </div>
+
+        <div id="history">
+            <h2>History</h2>  
+            <p id = "history_para"></p>
+            <button id= "delete">Delete</button>
         </div>
     </div>
     <script src="Calculator.js"></script>
