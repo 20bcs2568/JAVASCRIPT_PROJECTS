@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <title>Temperature Convertor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(175deg, transparent, rgb(66, 66, 66));
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(0, 55, 50, 0.721);
+            padding: 10px;
+            border-radius: 10px;
+            width: 30vw;
+            border: 1.5px solid rgb(177, 50, 50);
+        }
+
+        .input {
+            margin: 20px 0px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input2 {
+            width: 180px;
+            margin: 0px 10px;
+        }
+
+        h1, h3
+        {
+            text-align: center;
+            color: rgb(0, 251, 75);   
+        }
+
+        .input2 input,
+        .input2 select {
+        text-align: right;
+        }
+
+        input, select{
+            width: 100%;
+            height :30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <h1>Please enter the temperature you'd like to convert</h1>
+        <div id="flex" class="input">
+            <div class="flex input2">
+                <input type="number" id="input1" placeholder="0">
+                <select name="Degree" id="value1">
+                    <option value='Celsius'>Celsius</option>
+                    <option value='Fahrenheit'>Fahrenheit</option>
+                    <!-- <option value='Kelvin'>Kelvin</option> -->
+                </select>
+            </div>
+
+            <div> <img src="equal.png" width="35px" alt="equal"> </div>
+
+            <div class="flex input2">
+                <input type="number" id="input2" placeholder="32">
+                <select name="Degree" id="value2">
+                    <option value='Fahrenheit'>Fahrenheit</option>
+                    <option value='Celsius'>Celsius</option>
+                    <!-- <option value='Kelvin'>Kelvin</option>  -->
+                </select>
+            </div>
+        </div>
+        <h3 id = "h3"></h4>
+    </div>
+
+    <script>
+        let input1 = document.getElementById('input1');
+        let input2 = document.getElementById('input2');
+        let value1 = document.getElementById('value1');
+        let value2 = document.getElementById('value2');
+        let h3 = document.getElementById('h3');
+
+        function conversion1(input1, input2, value1, value2) {
+            str = "";
+            if (value1 == 'Celsius' && value2 == 'Fahrenheit') {
+                let a = (input1 * (9 / 5)) + 32;
+                h3.innerHTML = `Formula: (${input1} ℃ * 9 / 5) + 32 = ${a.toFixed(2)} °F`;
+                input2.value = a.toFixed(2);
+            }
+            else if (value1 == 'Fahrenheit' && value2 == 'Celsius') {
+                let a = (input1 - 32) * 5 / 9;
+                h3.innerHTML = `Formula: (${input1} °F -32) * 5 / 9= ${a.toFixed(2)} °C`;
+                input2.value = a.toFixed(2);
+            }
+            else {
+                h3.innerHTML = "";
+                input2.value = input1;
+            }
+        }
+        
+        function conversion2(input1, input2, value1, value2) {
+            if (value1 == 'Celsius' && value2 == 'Fahrenheit') {
+                let a = (input1 - 32) * 5 / 9;
+                h3.innerHTML = `Formula: (${input1} °F -32) * 5 / 9= ${a.toFixed(2)} °C`;
+                input2.value = a.toFixed(2);
+            }
+            else if (value1 == 'Fahrenheit' && value2 == 'Celsius') {
+                let a = (input1 * (9 / 5)) + 32;
+                h3.innerHTML = `Formula: (${input1} ℃ * 9 / 5) + 32 = ${a.toFixed(2)} °F`;
+                input2.value = a.toFixed(2);
+            }
+            else {
+                h3.innerHTML = "";
+                input2.value = input1;
+            }
+        }
+
+        input1.addEventListener('change', () => {
+            conversion1(input1.value, input2, value1.value, value2.value);
+        });
+        
+        value1.addEventListener('change', () => {
+            conversion1(input1.value, input2, value1.value, value2.value);
+        });
+        
+        input2.addEventListener('change', () => {
+            conversion2(input2.value, input1, value1.value, value2.value);
+        });
+
+        value2.addEventListener('change', () => {
+            conversion2(input2.value, input1, value1.value, value2.value);
+        });
+
+    </script>
+</body>
+
+</html>

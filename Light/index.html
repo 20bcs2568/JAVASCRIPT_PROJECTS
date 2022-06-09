@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Light On/Off</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, transparent, rgb(23, 23, 23)); 
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #button button {
+            /* width: 80px; */
+            /* height: 30px; */
+            font-size: 12px;
+            margin: 30px 50px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #turn_on {
+            background-color: rgba(255, 251, 0, 0.616);
+            color: rgb(220, 23, 23);
+        }
+
+        #turn_off {
+            background-color: rgba(190, 4, 4, 0.616);
+            color: rgb(255, 255, 255);
+        }
+
+        .img
+        {
+            width: 10vw;
+            height: 30vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <h1>Can you turn On the Bulb</h1>
+        <div class = "img"><img src="off_bulb.png" width = "100%" height = "100%" id="img"></div>
+        <div id="button">
+            <button id="turn_off">Turn Off Bulb</button>
+            <button id="turn_on">Turn On Bulb</button>
+        </div>
+    </div>
+
+    <script>
+        let img = document.getElementById('img');
+        let button_on = document.getElementById('turn_on');
+        let button_off = document.getElementById('turn_off');
+
+        button_on.addEventListener('click', () => {
+            img.src = "on_bulb.png";
+            document.body.style.background = "linear-gradient(0deg, transparent, rgb(251, 241, 86))";
+        });
+        
+        button_off.addEventListener('click', () => {
+            img.src = "off_bulb.png";
+            document.body.style.background = "linear-gradient(180deg, transparent, rgb(23, 23, 23))";
+        });
+
+    </script>
+</body>
+
+</html>
