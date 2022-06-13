@@ -119,7 +119,7 @@ h1
 table, thead
 {
     text-align: left;
-    width: 45vw;
+    width: 100%;
     outline: 2px solid black;
     border-collapse: collapse;
     border-radius: 10px;
