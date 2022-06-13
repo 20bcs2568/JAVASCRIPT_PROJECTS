@@ -1,0 +1,166 @@
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+
+:root
+{
+    --background: rgb(145, 98, 89);
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+header nav ul 
+{
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(70, 51, 70);
+}
+
+header nav li
+{
+    background-color: rgb(70, 51, 70);
+    margin: 5px 20px;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+h1
+{
+    text-align: center;
+    padding: 10px;
+    font-size: 36px;
+    color: var(--background);
+}
+
+#task, .table
+{
+    padding: 10px;
+    width: 45vw;
+    border-radius: 10px;
+    margin: 20px auto;
+    border: 2px solid rgb(151, 34, 34);
+    background: var(--background);
+}
+
+#task #add-task h2
+{
+    
+    background: var(--background);
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+} 
+
+#task #add-task div
+{
+    background: var(--background);
+    margin: 10px 10px;
+    margin: 20px;
+}
+
+#task #add-task
+{
+    background: var(--background);
+    
+}
+
+#task #add-task div label
+{
+    background: var(--background);
+    margin: 10px 0px;
+    font-size: 24px;
+    color: white;
+}
+
+#task #add-task div p
+{
+    color: rgb(228, 207, 207);
+    background: var(--background);
+}
+
+#task #add-task div input
+{
+    width: 100%;
+    height: 5%;
+    margin: 5px 0px;
+    font-size: 20px;
+    color: rgb(137, 7, 7);
+    padding: 5px;
+    border-radius: 5px;
+    outline: 2px solid rgb(205, 187, 187);
+    border: none;
+    background-color: rgb(243, 244, 248);
+}
+
+#task #add-task div textarea
+{
+    outline: 2px solid rgb(205, 187, 187);
+    background-color: rgb(243, 244, 248);
+    width: 100%;
+    height: 15%;
+    margin: 5px 0px;
+    font-size: 20px;
+    color: rgb(137, 7, 7);
+    padding: 5px;
+    border-radius: 10px;
+    resize: none;
+    border: none;
+}
+
+table, thead
+{
+    text-align: left;
+    width: 45vw;
+    outline: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+    outline: auto;
+    overflow: hidden;
+}
+
+thead
+{
+    border-radius: 0px;
+}
+
+tr, th, td
+{
+    padding: 10px 15px;
+}
+
+tr
+{
+    outline: 1px solid black;
+}
+
+#btn2
+{
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(131, 20, 20);
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn
+{
+    background-color: bisque;
+    margin: 20px;
+    font-size: 18px;
+    color: rgb(89, 30, 30);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+

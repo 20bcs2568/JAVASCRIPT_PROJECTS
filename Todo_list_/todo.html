@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css">
+    <link type="image/png" rel="icon" href="todo.jpg" sizes="16*16">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class='flex'>
+                <li>Home</li>
+                <li>Items</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>TODO APP</h1>
+
+    <div id='task'>
+        <div id='add-task'>
+            <h2>ADD TASK</h2>
+            <div>
+                <label for='tskname'>Title</label>
+                <input type='text' id="tskname">
+                <p>Add an item to the list</p>
+            </div>
+            <div>
+                <label for='desc'>Description</label>
+                <textarea id="desc"></textarea>
+            </div>
+            <button id='btn' class = 'btn'>Add to the List</button>
+            <button id='clear_list' class = 'btn'>Clear List</button>
+        </div>
+    </div>
+
+    <h1>Your Items</h1>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th id='sr'>Sr.</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='tbody'>
+                <!-- <tr>
+                    <td>1.</td>
+                    <td>Harshit</td>
+                    <td>Harshit is a good boy Harshit is a good boy Harshit is a good boy Harshit is a good boy Harshit is a good boy</td>
+                    <td><button id="btn2">Delete</button></td>
+                </tr> -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src='todo.js'></script>
+</body>
+
+</html>

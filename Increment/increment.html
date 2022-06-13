@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Increment</title>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body
+        {
+            background-color: rgb(247, 233, 216);
+        }
+
+
+        .container .div
+        {
+            margin: 50px;
+            padding: 20px;
+            flex-direction: column;
+            color: rgb(217, 0, 0)
+        }
+
+        .container .div p
+        {
+            font-size: 46px;
+            padding: 0px;
+            margin: 30px 10px;
+        }
+
+        .container .div img
+        {
+            filter: invert(30%);
+            width: 80px;
+        }
+
+        
+    </style>
+</head>
+
+<body class="flex">
+    <div class="container flex">
+        <div class="div flex">
+            <p>Task</p>
+            <img src="Task.svg">
+            <p class = "para" id = "p1" data-target="4000"></p>
+        </div>
+
+        <div class="div flex">
+            <p>Members</p>
+            <img src="Members.svg">
+            <p class = "para"  id = "p2"  data-target="800"></p>
+        </div>
+
+        <div class="div flex">
+            <p>Orders</p>
+            <img src="Orders.svg">
+            <p class = "para"  id = "p3" data-target="12000"></p>
+        </div>
+    </div>
+
+    <script>
+        let p1 = document.getElementById('p1');
+        let p2 = document.getElementById('p2');
+        let p3 = document.getElementById('p3');
+        let para = document.getElementsByClassName('para');
+
+        function value(tag, val, target)
+        {
+            if(val <= target )
+            {
+                setTimeout(()=>
+                {
+                    tag.innerHTML = val.toFixed(0) + "+";
+                    val += target/100;
+                    value(tag, val, target);
+                }, 10);
+            }
+            else
+            {
+                tag.innerHTML = target + "+";
+            }
+        }   
+
+        function Increment(tag)
+        {
+            let target = tag.attributes['data-target'].value;
+            target = Number(target);
+            let val = 0;
+            value(tag, val, target);
+        }
+
+        Increment(p1);
+        Increment(p2);
+        Increment(p3);
+
+    </script>
+</body>
+
+</html>
