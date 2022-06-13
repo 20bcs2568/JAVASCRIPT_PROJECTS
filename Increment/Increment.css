@@ -1,0 +1,28 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: rgb(247, 233, 216);
+}
+
+
+.container .div {
+    margin: 50px;
+    padding: 20px;
+    flex-direction: column;
+    color: rgb(217, 0, 0)
+}
+
+.container .div p {
+    font-size: 46px;
+    padding: 0px;
+    margin: 30px 10px;
+}
+
+.container .div img {
+    filter: invert(30%);
+    width: 80px;
+}

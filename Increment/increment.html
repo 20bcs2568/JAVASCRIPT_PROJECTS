@@ -2,42 +2,7 @@
 
 <head>
     <title>Increment</title>
-    <style>
-        .flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        body
-        {
-            background-color: rgb(247, 233, 216);
-        }
-
-
-        .container .div
-        {
-            margin: 50px;
-            padding: 20px;
-            flex-direction: column;
-            color: rgb(217, 0, 0)
-        }
-
-        .container .div p
-        {
-            font-size: 46px;
-            padding: 0px;
-            margin: 30px 10px;
-        }
-
-        .container .div img
-        {
-            filter: invert(30%);
-            width: 80px;
-        }
-
-        
-    </style>
+    <link rel = 'stylesheet' href="Increment.css">    
 </head>
 
 <body class="flex">
@@ -61,42 +26,7 @@
         </div>
     </div>
 
-    <script>
-        let p1 = document.getElementById('p1');
-        let p2 = document.getElementById('p2');
-        let p3 = document.getElementById('p3');
-        let para = document.getElementsByClassName('para');
-
-        function value(tag, val, target)
-        {
-            if(val <= target )
-            {
-                setTimeout(()=>
-                {
-                    tag.innerHTML = val.toFixed(0) + "+";
-                    val += target/100;
-                    value(tag, val, target);
-                }, 10);
-            }
-            else
-            {
-                tag.innerHTML = target + "+";
-            }
-        }   
-
-        function Increment(tag)
-        {
-            let target = tag.attributes['data-target'].value;
-            target = Number(target);
-            let val = 0;
-            value(tag, val, target);
-        }
-
-        Increment(p1);
-        Increment(p2);
-        Increment(p3);
-
-    </script>
+    <script src = 'Increment.js'></script>
 </body>
 
 </html>

@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(175deg, transparent, rgb(66, 66, 66));
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(0, 55, 50, 0.721);
+    padding: 10px;
+    border-radius: 10px;
+    width: 30vw;
+    border: 1.5px solid rgb(177, 50, 50);
+}
+
+.input {
+    margin: 20px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input2 {
+    width: 180px;
+    margin: 0px 10px;
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: rgb(0, 251, 75);
+}
+
+.input2 input,
+.input2 select {
+    text-align: right;
+}
+
+input,
+select {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+}
