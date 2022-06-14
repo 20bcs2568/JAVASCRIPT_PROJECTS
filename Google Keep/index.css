@@ -1,0 +1,172 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+header {
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(255, 255, 146);
+    color: rgb(93, 93, 93);
+}
+
+header img {
+    filter: invert(30%);
+    margin: 0px 8px;
+    margin-right: 20px;
+}
+
+header img+img {
+    margin-right: 5px;
+}
+
+header p+button {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 32px;
+}
+
+header p {
+    font-size: 24px;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+#add_note {
+    padding: 5px;
+    position: absolute;
+    margin: 20px 15px;
+    right: 0px;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+#add_note button {
+    display: flex;
+    align-items: center;
+    transition: all 1s;
+}
+
+#add_note button:hover {
+    border-radius: 20px;
+    transform: scaleX(1.1);
+    background-color: rgb(255, 255, 146);
+}
+
+#add_note button p {
+    font-size: 18px;
+    padding: 4px;
+}
+
+#add_note img {
+    /* margin: 0px 10px; */
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 4px;
+    background-color: rgb(255, 255, 146);
+}
+
+#block {
+    display: block;
+    /* border: 2px solid red    ; */
+    height: 90px;
+}
+
+.outside {
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea {
+    width: 70vw;
+    min-height: 70vh;
+    /* border: 2px solid rgb(139, 139, 139); */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.textarea textarea {
+    width: 100%;
+    height: 18vh;
+    resize: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.textarea textarea:focus {
+    border: none;
+    outline: none;
+
+}
+
+.main {
+    border: 2px solid rgb(126, 122, 122);
+    width: 29%;
+    height: 18%;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.main .image {
+    display: flex;
+    padding: 5px;
+    justify-content: flex-end;
+    background-color: rgb(223 220 255);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main .image input
+{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size:22px; 
+    font-weight: bold;
+}
+
+.main .image img {
+    border-radius: 20px;
+    padding: 4px;
+    margin: 2px 4px;
+    background-color: rgb(145, 173, 145);
+
+}
+
+.main .image #delete {
+    background-color: rgb(255, 75, 75);
+}
+
+.main .image #save
+{
+    background-color: rgb(106 135 255);
+}
+
+.main .image img:hover {
+    cursor: pointer;
+    background-color: rgb(229, 147, 147);
+    filter: invert(100%);
+}
+
+#new_div
+{
+    border: 1px solid red;
+}
