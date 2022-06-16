@@ -1,0 +1,31 @@
+body
+{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button
+{
+    width: 150px;
+    font-size: 30px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rosybrown;
+    color: white;
+}
+
+h1, span
+{
+    font-size: 40px;
+}
+
+div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

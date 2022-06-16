@@ -1,0 +1,40 @@
+body
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    background-color: antiquewhite;
+}
+
+.btn
+{
+    font-size: 22px;
+    padding: 5px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: brown;
+    color: white;
+
+}
+
+p
+{
+    font-weight: bold;
+    margin: 10px 30px;
+    font-size: 82px;
+}
+
+p+p
+{
+    font-size: 100px;
+}

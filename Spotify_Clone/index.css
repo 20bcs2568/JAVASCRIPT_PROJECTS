@@ -1,0 +1,153 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+
+header
+{
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+header nav ul 
+{
+    padding: 5px;
+    list-style: none;
+}
+
+header nav ul li
+{
+    font-size: 18px;
+    margin: 10px 15px;
+}
+
+header nav ul li div img
+{
+    margin: 0px 5px;
+}
+
+header nav ul li div span
+{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+body
+{
+    background-color: antiquewhite;
+}
+
+section
+{
+    align-items: center;
+    justify-content: center;
+}
+
+section .container
+{
+    width: 70vw;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    color: white;
+}
+
+h1
+{
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+section .container .song
+{
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 40vw;
+    margin: 15px;
+    padding: 10px;
+    font-size: 18px;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+
+section .container .song img 
+{
+    width: 35px;
+}
+
+section .container .song div img
+{
+    width: 30px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+
+footer
+{
+    position:sticky;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px 0px;
+    box-sizing: border-box;
+}
+
+footer .bottom .songInfo
+{
+    justify-content: flex-end;
+    width: 30vw;
+}
+
+footer .bottom .songInfo img
+{
+    transition: all;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    margin: 15px;
+    visibility: hidden;
+}
+
+footer .bottom .icons
+{
+    justify-content: center;
+    margin: 10px;
+    width: 40vw;
+    filter: invert(100%);
+}
+
+footer .bottom .icons .fas, footer .bottom .icons .far
+{
+    margin: 5px 8px;
+    cursor: pointer;
+}
+
+footer .seek
+{
+    padding-top: 20px;
+    height: 7px;
+    justify-content: center;
+}
+
+footer .seek input
+{
+    width: 80vw;
+    margin: 0px 6px;
+}
